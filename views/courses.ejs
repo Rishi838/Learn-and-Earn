@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/courses.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Navbar starts here -->
+    <header class="header-area">
+        <!-- site-navbar start -->
+        <div class="navbar-area">
+            <div class="container">
+                <nav class="site-navbar">
+                    <!-- site logo -->
+                    <a href="/" class="site-logo">logo</a>
+
+                    <!-- site menu/nav -->
+                    <ul>
+                        <li><a href="/home">home</a></li>
+                        <li><a href="/courses">Tracks</a></li>
+                        <li><a href="/discussion">Discussion</a></li>
+                        <li><a href="/compile">Compile</a></li>
+                    </ul>
+
+                    <!-- nav-toggler for mobile version only -->
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div><!-- navbar-area end -->
+    </header>
+    <!-- Navbar ends here -->
+
+    <!-- Carousel effect html starts here -->
+    <div id="carousel" data-auto="true">
+        <div id="scene">
+            <img class="carousel_item" src="../stylesheets/media/7.png" alt="">
+            <img class="carousel_item" src="../stylesheets/media/6.png" alt="">
+            <img class="carousel_item" src="../stylesheets/media/ai.png" alt="">
+            <img class="carousel_item" src="../stylesheets//media/1.gif" alt="">
+            <img class="carousel_item" src="../stylesheets/media/2.gif" alt="">
+            <img class="carousel_item" src="../stylesheets/media/3.gif" alt="">
+            <img class="carousel_item" src="../stylesheets/media/4.gif" alt="">
+            <img class="carousel_item" src="../stylesheets/media/5.gif" alt="">
+            <img class="carousel_item" src="../stylesheets/media/6.gif" alt="">
+            <img class="carousel_item" src="../stylesheets/media/1.gif" alt="">
+        </div>
+
+        <div id="carousel_btn">
+            <div class="btn prev">Prev</div>
+            <div class="btn next">Next</div>
+        </div>
+    </div>
+    <!-- Carousel effect css ends here -->
+    <h1 style="color: white ; text-align: center; padding-top: 4rem;  font-family: 'Merriweather', serif; ">Get Started
+        with Most Popular Courses in Town</h1>
+    <!-- Search Box starts here -->
+    <div class="box" style="padding-top: 5rem;">
+        <input type="text" name="text" class="input" placeholder="Search Courses....">
+        <button class="custom-btn btn-1">Search</button>
+    </div>
+    <!-- SearchBox ends here -->
+    <!-- Courses card starts here -->
+    <div class="courses">
+
+        <div id="programming">
+            <span class="glow"></span>
+            <div>
+                Programming Basics
+            </div>
+        </div>
+        <div id="dsa">
+            <span class="glow"></span>
+            <div>
+                Data Structures and Algorithms
+            </div>
+        </div>
+        <div id="c">
+            <span class="glow"></span>
+            <div>
+                {{!-- <span>cool</span>--}}
+                C Language
+            </div>
+        </div>
+        <div id="c++">
+            <span class="glow"></span>
+            <div>
+                C++
+            </div>
+        </div>
+        <div id="python">
+            <span class="glow"></span>
+            <div>
+                Python
+            </div>
+        </div>
+        <div id="web">
+            <span class="glow"></span>
+            <div>
+                Web Development
+            </div>
+        </div>
+        <div id="android">
+            <span class="glow"></span>
+            <div>
+                Android Developmnent
+            </div>
+        </div>
+        <div id="ml">
+            <span class="glow"></span>
+            <div>
+                Machine Learning
+            </div>
+        </div>
+        <div id="devops">
+            <span class="glow"></span>
+            <div>
+                Dev-Ops
+            </div>
+        </div>
+    </div>
+    <!-- Courses card ends here -->
+    <script src="../scripts/courses.js"></script>
+</body>
+
+</html>
