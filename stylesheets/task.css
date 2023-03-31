@@ -1,0 +1,409 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	background: black;
+}
+
+ul {
+	list-style: none;
+}
+
+.Sidebar-navItem span {
+	text-decoration: none;
+	color: white;
+}
+
+/* Css for slider starts here */
+.Wrapper {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.Sidebar {
+	position: relative;
+	display: table-cell;
+	min-width: 240px;
+	max-width: 240px;
+	min-height: 100%;
+	background-color: black;
+	border-right: 3px solid rgba(252, 252, 252, 0.2);
+	transition: max-width 0.4s ease, min-width 0.4s ease;
+	user-select: none;
+}
+
+.Sidebar.is-collapsed {
+	max-width: 50px;
+	min-width: 50px;
+	transition: max-width 0.4s ease, min-width 0.4s ease;
+}
+
+.Sidebar.is-collapsed .Sidebar-logo {
+	transform: scale(0.625) translate(-64px, -104px);
+	transition: transform 0.4s ease;
+}
+
+.Sidebar.is-collapsed .Sidebar-navItem {
+	padding-left: 17px;
+	transition: padding-left 0.4s ease;
+}
+
+.Sidebar.is-collapsed .Sidebar-navItem span {
+	opacity: 0;
+}
+
+.Sidebar.is-collapsed .Sidebar-toggleText {
+	display: none;
+}
+
+.Sidebar.is-collapsed .Sidebar-toggleArrow {
+	left: 17.5px;
+	transform: rotate(179deg);
+}
+
+.Sidebar.is-collapsed .Sidebar-footer:hover .Sidebar-toggleArrow {
+	left: 17.5px;
+	transition: left 0.4s ease, transform 0.4s ease;
+}
+
+@media (max-width: 600px) {
+	.Sidebar {
+		min-width: 50px;
+	}
+}
+
+.Sidebar-header {
+	position: relative;
+	height: 130px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.Sidebar-logo {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-40px);
+	display: inline-block;
+
+	transition: transform 0.4s ease, height 0.4s ease, width 0.4s ease;
+}
+
+@media (max-width: 600px) {
+	.Sidebar-logo {
+		transform: translate(-24px, -80px);
+		width: 50px;
+		height: 50px;
+	}
+}
+
+.Sidebar-navItem {
+	padding: 10px 0 10px 40px;
+	white-space: nowrap;
+	overflow: hidden;
+	transition: padding-left 0.4s ease;
+}
+
+@media (max-width: 500px) {
+	.Sidebar-navItem {
+		padding-left: 17px;
+	}
+}
+
+.Sidebar-navItem:hover {
+	background-color: rgba(252, 252, 252, 0.2);
+	cursor: pointer;
+}
+
+.Sidebar-navItem span {
+	opacity: 1;
+	transition: opacity 0.4s ease;
+}
+
+@media (max-width: 600px) {
+	.Sidebar-navItem span {
+		display: none;
+	}
+}
+
+.Sidebar-menuIcon {
+	color: white;
+}
+
+.Sidebar-menuIcon:not(.Sidebar-toggleArrow) {
+	margin-right: 1rem;
+}
+
+.Main {
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
+	padding-left: 1.5rem;
+	color: aliceblue;
+	padding-top: 1rem;
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Css for sidebar ends here */
+/* Css for login form starts here */
+input[type=text],
+input[type=password],
+input[type=email] {
+	width: 100%;
+	height: 40px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	background-color: rgba(252, 252, 252, 0.2);
+	border: 3px solid rgba(252, 252, 252, 0.2);
+	box-sizing: border-box;
+	color: white;
+}
+
+/* Set a style for all buttons */
+button {
+	background-color: transparent;
+	border: 2px solid #37d7d7;
+	border-radius: 0.6em;
+	color: #37d7d7;
+	;
+	cursor: pointer;
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	width: 100%;
+	height: 50px
+}
+
+.btn:hover,
+.btn:focus {
+	color: #fff;
+	outline: 0;
+}
+
+.first {
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+	margin-top: 14px;
+}
+
+.first:hover {
+	color: black;
+	box-shadow: 0 0 40px 40px#37d7d7 inset;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+	text-align: center;
+	position: relative;
+}
+
+.container {
+	background-color: black;
+	padding: 16px;
+	padding-top: 0px;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	/* overflow: auto; Enable scroll if needed */
+	overflow-y: hidden;
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.8);
+	/* Black w/ opacity */
+	padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: black;
+	margin: 5% auto 15% auto;
+	/* 5% from the top, 15% from the bottom and centered */
+	border: 5px solid rgba(252, 252, 252, 0.2);
+	width: 23rem;
+	/* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: white;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #37d7d7;
+	cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+	from {
+		-webkit-transform: scale(0)
+	}
+
+	to {
+		-webkit-transform: scale(1)
+	}
+}
+
+@keyframes animatezoom {
+	from {
+		transform: scale(0)
+	}
+
+	to {
+		transform: scale(1)
+	}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+	.cancelbtn {
+		width: 100%;
+	}
+}
+
+/* Css for error that occurs */
+.form_error {
+	text-align: right;
+	color: red;
+}
+/* Css for login form ends here */
+
+h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: block;
+    margin: 20px;
+    padding-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 1rem;
+    letter-spacing: 0.015rem;
+    display: block;
+    margin: 20px;
+}
+
+.quote {
+    background: rgb(61, 58, 58);
+    border-radius: 14px;
+    margin-bottom: 24px;
+    padding: 24px;
+    font-style: italic;
+
+    display: block;
+    margin-block-start: 1em; 
+    margin-block-end: 1em;
+    /* margin-inline-start: 40px; */
+    margin-inline-end: 40px;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 20px;
+    display: block;
+    line-height: 1.67;
+    letter-spacing: 0.015rem;
+    margin: 10px;
+    color: white;
+}
+
+
+input {
+    border: 1px solid rgba(252, 252, 252, 0.4);
+    background-color: rgba(252, 252, 252, 0.2);
+    width: 250px;
+    border-radius: 3px;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 10px 15px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+}
+
+.item {
+    justify-self: center;
+}

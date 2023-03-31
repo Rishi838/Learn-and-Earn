@@ -1,0 +1,100 @@
+
+<!-- Login PopUp -->
+<div id="id01" class="modal">
+
+    <div class="modal-content animate">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <p style="color:white;font-size:40px"> Login </p>
+        </div>
+
+        <div class="container">
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Your Mail Here" id="login_email_id" required>
+            <p class="form_error" id="login_email_error"></p>
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Your Password Here" id="login_password" required>
+            <p class="form_error" id="login_pass_error"></p>
+            <p style="text-decoration: underline; margin-top:10px">Forgot Password?</p>
+            <button class="first" id="login">Login</button>
+            <p class="form_error" id="login_credentials_error"></p>
+            <!-- {{!-- <input type="checkbox" checked="checked"> Remember me --}} -->
+        </div>
+
+        <div class="container">
+            <p>Not a Member? <span id="btn_signup" style="text-decoration: underline ; cursor:pointer">Sign
+                    Up</span></p>
+        </div>
+    </div>
+</div>
+<!-- Signup PopUp -->
+<div id="id02" class="modal">
+
+    <div class="modal-content animate">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <p style="color:white;font-size:40px"> Signup </p>
+            <!-- {{!-- <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar">
+            --}} -->
+        </div>
+
+        <div class="container" id="otp_id">
+            <label><b></b>Name</b></label>
+            <input type="text" placeholder="Your Name Here" id="signup_name" required>
+            <p class="form_error" id="signup_name_error"></p>
+            <label><b>Email</b></label>
+            <input type="email" placeholder="Your Email Here" id="signup_email" required>
+            <p class="form_error" id="signup_email_error"></p>
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Your PassWord Here" id="signup_pass" required>
+            <p class="form_error" id="signup_pass_error"></p>
+            <button class="first" id="signup">Submit</button>
+            <p class="form_error" id="signup_credentials_error"></p>
+            <!-- {{!-- <input type="checkbox" checked="checked"> Remember me --}} -->
+        </div>
+
+        <div class="container">
+            <p>Already a User? <span id="btn_login"
+                    style="text-decoration: underline ; cursor:pointer">Login</span></p>
+        </div>
+    </div>
+</div>
+<!-- Verify Popup -->
+<div id="id03" class="modal">
+
+    <div class="modal-content animate">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <p style="color:white;font-size:40px"> Verify </p>
+        </div>
+
+        <div class="container">
+            <p style="font-style:italic;">An Email has been sent to your email,Please Check your Inbox</p>
+            <p style="font-style:italic;">OTP Will remain valid for two minutes only</p>
+            <input type="text" placeholder="Your OTP Here" id="otp" required>
+            <p class="form_error" id="otp_valid_error"></p>
+            <span style="text-decoration:underline" id="resend">Resend OTP</span>
+            <button class="first" id="verify_otp">Verify OTP</button>
+        </div>
+    </div>
+</div>
+<!-- Logout Popup -->
+<div id="id04" class="modal">
+
+    <div class="modal-content animate">
+        <div class="imgcontainer">
+            <!-- <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                title="Close Modal">&times;</span> -->
+            <p style="color:white;font-size:40px"> Are You Sure You Want to logout? </p>
+        </div>
+
+        <div class="container">
+            <button class="first" id="l4"> Yes</button>
+            <button class="first" id="l5">No</button>
+            <!-- {{!-- <input type="checkbox" checked="checked"> Remember me --}} -->
+        </div>
+    </div>
+</div>
