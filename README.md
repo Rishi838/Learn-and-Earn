@@ -2,7 +2,7 @@
 
 Learn and Earn is destined to be a study website which rewards students for completing a module.
 
-Apart from that , the teahcing method will not be so formal that it become boring, instead it will give a feel of you friend teaching you.
+Apart from that , the teahcing method will not be so formal that it become boring, instead it will give a feel of your friend teaching you.
 
 Build with passion to give a jawdropping UI/ UX.
 
