@@ -1,0 +1,601 @@
+/* default css start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Hiding scroll bar but keeping its functionality */
+body::-webkit-scrollbar {
+  display: none;
+}
+/* What Color to display on selction */
+::selection {
+  color: white;
+  background:#e002f4;
+}
+body {
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  background-color: black;
+  font-size: 1.15rem;
+  text-rendering: optimizeSpeed;
+  font-family: system-ui, sans-serif;
+  color:white
+
+}
+
+/* navbar css starts here */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header-area {
+  /* background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .5)),
+    url(https://images.unsplash.com/photo-1528353518104-dbd48bee7bc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80); */
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Regular navbar css starts here */
+.navbar-area {
+  background: black;
+  border-bottom: 1px solid #000;
+}
+
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.site-logo {
+  font-size: 2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.site-navbar ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-navbar ul li a:hover {
+  background: #ab79d6;
+  color: white;
+  font-size: 15px;
+}
+
+/* navbar regular css end */
+
+
+/* nav-toggler css start */
+.nav-toggler {
+  border: 3px solid #fff;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: .3s;
+}
+
+.nav-toggler span:before {
+  content: '';
+  transform: translateY(-9px);
+}
+
+.nav-toggler span:after {
+  content: '';
+  transform: translateY(6px);
+}
+
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+/* nav-toggler css start */
+
+
+
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 720px;
+  }
+
+  /* navbar css for mobile start */
+  .nav-toggler {
+    display: block;
+  }
+
+  .site-navbar {
+    min-height: 60px;
+  }
+
+  .site-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #444;
+    background-color: black;
+    z-index: 100;
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s;
+  }
+
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-navbar ul li a {
+    padding: 25px;
+  }
+
+  .site-navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, .1);
+  }
+
+  .site-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+
+  .intro-area h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  /* navbar css for mobile end */
+}
+
+/* mobile breakpoint end */
+/* Navbar Css ends here */
+/*carousel effect css starts here */
+#carousel {
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+#carousel #scene {
+  width: 42%;
+  margin: 40px auto 0 auto;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+#carousel #scene .carousel_item {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px 0 10px;
+  backface-visibility: hidden;
+}
+
+#carousel #scene .carousel_item:not(:first-of-type) {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#carousel #carousel_btn {
+  width: 100px;
+  margin: 20px auto 0 auto;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#carousel #carousel_btn .btn {
+  width: 45px;
+  height: 45px;
+  line-height: 40px;
+  padding-left: 7px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  float: left;
+  border: 2px solid #2f2f2f;
+  background-color: #ab79d6;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#carousel #carousel_btn .btn:hover {
+  color: #ab79d6;
+  background-color: white;
+}
+
+#carousel #carousel_btn>div:first-child {
+  margin-right: 10px;
+}
+
+/* Carousel effect css ends here */
+/* Searchbox css starts here */
+.box {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+#search_txt:focus {
+ border: none;
+ color:white;
+ font-family: system-ui, sans-serif;
+}
+#search_txt{
+width:20em;
+border: 3px solid rgb(171, 121, 214);
+border-radius: 7px;
+margin-right: 10px;
+padding-left: 10px;
+background-color: #1d1d1d;
+color:white;
+font-family: system-ui, sans-serif;
+font-size: 15px;
+}
+
+
+
+/* SearchBox css Ends here */
+/* Courses card css starts here */
+.heading {
+  color: white;
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 2.1rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+@media only screen and (max-width: 760px) {
+  .heading {
+    line-height: 1.2;
+  }
+}
+
+/* Searchbox css ends here */
+/* Courses card starts here */
+
+
+:root {
+  --color-primary: #ab79d6;
+  --color-on-primary: #351d4a;
+  --color-secondary: #d367c1;
+  --color-background: #27272c;
+  --color-on-background: #c5c5ce;
+  --color-background-alt: #1e1c22;
+  --color-background-alt-alpha: rgba(30, 28, 34, .75);
+  --color-inverse: #fff;
+  --color-gray: #8e8e8e;
+  --color-yellow: #dedf40;
+  --color-green: #62cb5c;
+  --color-blue: #00bbcb;
+  --color-on-blue: #004a09;
+  --gradient: var(--color-secondary) 10%, var(--color-yellow) 25%, var(--color-green) 50%, var(--color-blue) 75%, var(--color-primary) 90%;
+  --brand-font: "Kanit", serif;
+  --brand-font-weight: 800;
+  --brand-font-alt: "Baloo 2", system-ui, sans-serif;
+  --brand-font-alt-weight: normal;
+  --brand-font-alt-weight-bold: 500
+}
+
+.card__title {
+  font-weight: var(--brand-font-alt-weight-bold);
+  font-family: var(--brand-font-alt);
+}
+
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: min(var(--content-max, 120ch), 100% - 2rem)
+}
+
+.column-container {
+  --gap: 2rem;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 25ch), 1fr))
+}
+
+
+
+.section {
+  margin-bottom: var(--section-margin, 8vh);
+  margin-top: var(--section-margin, 8vh);
+  padding-bottom: var(--section-padding, 4vh);
+  padding-top: var(--section-padding, 4vh)
+}
+.button {
+  --button-background: var(--color-primary);
+  --button-color: var(--color-on-primary);
+  --outline-color: transparent;
+  align-items: center;
+  background-color: var(--button-background);
+  border: 2px solid transparent;
+  border-radius: .5em;
+  color: var(--button-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--brand-font-alt);
+  font-weight: var(--brand-font-alt-weight-bold);
+  gap: .5em;
+  justify-content: center;
+  line-height: calc(4px + 2ex);
+  min-width: 10ch;
+  padding: .55em .75em .5em;
+  text-align: center;
+  text-decoration: none;
+  transition: none .18s ease-in-out;
+  transition-property: background-color, color, border-color
+}
+
+.button:focus {
+  box-shadow: 0 0 0 max(.15em, 2px) var(--button-focus-inner, var(--button-color)), 0 0 0 max(.3em, 2px) var(--button-focus-outer, var(--button-background))
+}
+
+.button:active,
+.button:hover {
+  background-color: var(--button-hover-background-color, var(--button-color));
+  color: var(--button-hover-color, var(--button-background))
+}
+
+.button:active:not(.button-outlined),
+.button:hover:not(.button-outlined) {
+  border-color: var(--button-hover-border-color, currentColor)
+}
+
+.button--secondary {
+  --button-background: var(--color-secondary);
+  --button-color: var(--color-on-secondary)
+}
+
+.button--blue {
+  --button-background: var(--color-blue);
+  --button-color: var(--color-on-blue)
+}
+
+.button-outlined {
+  --button-background: transparent;
+  --button-color: var(--color-blue);
+  --button-hover-color: var(--color-on-blue);
+  --button-focus-inner: var(--color-background);
+  --button-focus-outer: var(--color-blue);
+  border-color: var(--button-color)
+}
+
+.button-outlined--inverse {
+  --button-background: transparent;
+  --button-color: var(--color-inverse);
+  --button-hover-background-color: hsla(0, 0%, 100%, .16);
+  --button-hover-color: currentColor;
+  --button-focus-outer: currentColor
+}
+
+.button__icon {
+  flex-shrink: 0;
+  height: 1em;
+  width: 1em
+}
+
+.button-icon {
+  --button-background: transparent;
+  --button-color: var(--color-inverse);
+  --button-hover-background-color: hsla(0, 0%, 100%, .16);
+  --button-hover-color: currentColor;
+  --button-focus-outer: currentColor;
+  border-radius: 50%;
+  height: 1.75em;
+  min-width: unset;
+  padding: .15em;
+  width: 1.75em
+}
+
+.button--small {
+  font-size: 1rem
+}
+
+.card {
+  --skew: -5deg;
+  display: flex;
+  flex-direction: column;
+  padding: 4.5rem 2rem;
+  position: relative
+}
+
+.card:after,
+.card:before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: skewY(var(--skew));
+  z-index: -1
+}
+
+.card__content {
+  --gap: 1rem;
+  display: grid;
+  gap: var(--gap);
+  justify-items: center
+}
+
+.card__content p {
+  font-size: 1.05rem;
+  line-height: 1.75
+}
+
+.card--teaser {
+  justify-content: center
+}
+
+.card--teaser:before {
+  border-radius: .25rem;
+  outline: 1px dashed var(--color-secondary);
+  outline-offset: -1px
+}
+
+.card--teaser .card__content {
+  place-content: center
+}
+
+.card--text img {
+  border-radius: 50%
+}
+
+.card--episode {
+  --message: "Pick me!"
+}
+
+.card--episode .card__title {
+  justify-self: start
+}
+
+.card--episode .card__title.peekaboo:before {
+  color: var(--color-inverse);
+  content: "✨ " var(--message);
+  font-size: .75em;
+  font-weight: 400;
+  left: 2rem;
+  position: absolute;
+  text-transform: uppercase;
+  top: 3rem
+}
+
+.card--episode:nth-of-type(3) {
+  --message: "This is a great one!"
+}
+
+.card--episode:nth-of-type(4) {
+  --message: "You'll love this one!"
+}
+
+.card--episode:nth-of-type(5) {
+  --message: "Check this one out!"
+}
+
+.card--episode .card__content a:before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0
+}
+
+@supports selector(:focus-within) {
+  .card--episode .card__content a {
+    --outline-color: transparent
+  }
+}
+
+.card--episode .card__content:before {
+  content: attr(data-episode);
+  font-family: var(--brand-font-alt);
+  font-size: 2rem;
+  opacity: .65;
+  position: absolute;
+  right: 1rem;
+  top: 0
+}
+
+.card--episode:before,
+.card--text:before {
+  background-image: linear-gradient(35deg, var(--gradient));
+  border-radius: .25rem;
+  height: calc(100% + 1px);
+  top: -1px;
+  transition: transform .24s ease-in
+}
+
+.card--episode:after,
+.card--text:after {
+  background-image: linear-gradient(to bottom, var(--color-background-alt-alpha), var(--color-background-alt) .75rem)
+}
+
+.card--episode:focus-within:before,
+.card--episode:hover:before,
+.card--text:focus-within:before,
+.card--text:hover:before {
+  transform: skewY(var(--skew)) scale(1.03)
+}
+
+.card--episode:focus-within:after,
+.card--text:focus-within:after {
+  outline: 1px dotted;
+  outline-offset: -.55rem
+}
+
+.card--episode :focus,
+.card--text :focus {
+  scroll-margin-bottom: 40vh
+}
+
+.card--episode a.card__title,
+.card--text a.card__title {
+  font-size: 1.35rem;
+  line-height: 1.15;
+  text-decoration: none
+}
+
+.card--episode a.card__title:not([class*=color]),
+.card--text a.card__title:not([class*=color]) {
+  color: #d367c1
+}
+
+@media (min-width:80ch) {
+  .card {
+    --skew: -8deg
+  }
+}
+
+@media (max-width:120ch) {
+  .card--teaser:first-child {
+    grid-row-start: 2
+  }
+}
+
+/* Courses card css ends here */
