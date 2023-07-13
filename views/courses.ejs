@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/courses.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Varela+Round&display=swap"
+        rel="stylesheet"> -->
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Navbar starts here -->
+    <header class="header-area">
+        <!-- site-navbar start -->
+        <div class="navbar-area">
+            <div class="container">
+                <nav class="site-navbar">
+                    <!-- site logo -->
+                    <a href="/" class="site-logo">learn</a>
+
+                    <!-- site menu/nav -->
+                    <ul>
+                        <li><a href="/home">home</a></li>
+                        <li><a href="/courses">Tracks</a></li>
+                        <li><a href="/discussion">Discussion</a></li>
+                        <li><a href="/compile">Compile</a></li>
+                    </ul>
+
+                    <!-- nav-toggler for mobile version only -->
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div><!-- navbar-area end -->
+    </header>
+    <!-- Navbar ends here -->
+
+    <!-- Carousel effect html starts here -->
+    <div id="carousel" data-auto="true">
+        <div id="scene">
+            <img class="carousel_item" src="../stylesheets/media/7.png" alt="">
+            <img class="carousel_item" src="../stylesheets/media/6.png" alt="">
+            <img class="carousel_item" src="../stylesheets/media/ai.png" alt="">
+            <img class="carousel_item" src="../stylesheets//media/1.gif" alt="">
+            <img class="carousel_item" src="../stylesheets/media/2.gif" alt="">
+            <img class="carousel_item" src="../stylesheets/media/3.gif" alt="">
+            <img class="carousel_item" src="../stylesheets/media/4.gif" alt="">
+            <img class="carousel_item" src="../stylesheets/media/5.gif" alt="">
+            <img class="carousel_item" src="../stylesheets/media/6.gif" alt="">
+            <img class="carousel_item" src="../stylesheets/media/1.gif" alt="">
+        </div>
+
+        <div id="carousel_btn">
+            <div class="btn prev">Prev</div>
+            <div class="btn next">Next</div>
+        </div>
+    </div>
+    <!-- Carousel effect css ends here -->
+    <h1 class="heading">Get Started
+        with Most Popular Courses in Town</h1>
+    <!-- Search Box starts here -->
+    <div class="box" >
+        <input type="text" id="search_txt" style="background-attachment: black;" placeholder="Search Courses....">
+        <a class="button" id="search_btn">Search</a>
+    </div>
+    <!-- SearchBox ends here -->
+    <!-- Courses card starts here -->
+
+    <aside  class="section container" id="courses_container" style="text-align: center;" >
+        <p id="no_courses"></p>
+        <ul role="list" class="column-container section" id="courses_cards" style="--section-padding: 0">
+            <!-- Cards here will be rendered through javascript , dont delete it-->
+        </ul>
+        
+    </aside>
+    
+    <!-- Courses card ends here -->
+    <script src="../scripts/courses.js" type="module"></script>
+</body>
+
+</html>
